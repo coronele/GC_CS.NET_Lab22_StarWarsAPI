@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "GetPersonbyId";
+}
+
+@model SWCharacterRoot
+
+<h1>@Model.name</h1>
+<div>
+    <table class="table">
+        <tr>
+            <th>Height</th>
+            <td>@Model.height</td>
+        </tr>
+        <tr>
+            <th>Birth Year</th>
+            <td>@Model.birth_year</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>@Model.gender</td>
+        </tr>
+        <tr>
+            <th>Homeworld</th>
+            <td>@Model.homeworld</td>
+        </tr>
+        <tr>
+            <th>Vehicles</th>
+            <td>
+                @foreach (string vehicle in Model.vehicles)
+                {
+                    <ol>
+                        <li>@vehicle</li>
+                    </ol>
+                }
+            </td>
+        </tr>
+        <tr>
+            <th>Starships</th>
+            <td>
+                @foreach (string starship in Model.starships)
+                {
+                    <ol>
+                        <li>@starship</li>
+                    </ol>
+                }
+            </td>
+        </tr>
+        <tr>
+            <th>Films character was in</th>
+            <td>
+                @foreach (string films in Model.films)
+                {
+                    <ol>
+                        <li>@films</li>
+                    </ol>
+                }
+            </td>
+        </tr>
+        <tr>
+            <th>Link:</th>
+            <td><a href="@Model.url">@Model.url</a></td>
+        </tr>
+    </table>
+</div>

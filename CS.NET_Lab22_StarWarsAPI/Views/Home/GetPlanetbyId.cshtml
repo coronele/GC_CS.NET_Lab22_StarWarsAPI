@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "GetPlanetbyId";
+}
+@model SWPlanetRoot
+
+<h1>Planet: @Model.name</h1>
+
+<div>
+    <table class="table">
+        <tr>
+            <th>Rotation Period</th>
+            <td>@Model.rotation_period</td>
+        </tr>
+        <tr>
+            <th>Orbital Period</th>
+            <td>@Model.orbital_period</td>
+        </tr>
+        <tr>
+            <th>Diameter</th>
+            <td>@Model.diameter</td>
+        </tr>
+        <tr>
+            <th>Climate</th>
+            <td>@Model.climate</td>
+        </tr>
+        <tr>
+            <th>Population</th>
+            <td>@Model.population</td>
+        </tr>
+        <tr>
+            <th>Films planet was in</th>
+            <td>
+                @foreach (string films in Model.films)
+                {
+                    <ol>
+                        <li>@films</li>
+                    </ol>
+                }
+            </td>
+        </tr>
+        <tr>
+            <th>Link:</th>
+            <td><a href="@Model.url">@Model.url</a></td>
+        </tr>
+    </table>
+</div>
+

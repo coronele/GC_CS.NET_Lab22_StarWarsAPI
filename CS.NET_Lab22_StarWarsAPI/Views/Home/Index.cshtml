@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">The People and Planets of Star Wars</h1>
+</div>
+<div>
+    <form action="../Home/GetPersonbyId" method="post" class="form-control" id="swPeopleForm">
+        <label class="col-md-6" width="">Enter a Star Wars Character's ID number:</label>
+        <input type="number" name="id" value="" />
+        <input type="submit" value="Search character" />
+    </form>
+</div>
+<div>
+    <form action="../Home/GetPlanetbyId" method="post" class="form-control" id="swPlanetForm">
+        <label class="col-md-6">Enter a Star Wars planet's ID number:</label>
+        <input type="number" name="id" value="" />
+        <input type="submit" value="Search planet" />
+    </form>
+</div>
